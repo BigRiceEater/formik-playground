@@ -8,25 +8,33 @@ import FormikSelect from './components/FormikSelect';
 import BootstrapFormikSelect from './components/BootstrapFormikSelect';
 import BootstrapSelect from './components/BootstrapSelect';
 
-import { Button } from 'reactstrap';
+import { Card, CardBody, CardDeck } from 'reactstrap';
 class App extends React.Component {
   state = {
-    components: [
-      <BasicInput />,
-      <BasicSelect />,
-      <FormikSelect />,
-      <BootstrapFormikSelect />,
-      <BootstrapSelect />
+    demoes: [
+      { label: 'Raw Formik', comps: [<BasicInput />, <BasicSelect />] },
+      { label: 'Formik Helpers', comps: [<FormikSelect />] },
+      {
+        label: 'Bootstrapped',
+        comps: [<BootstrapFormikSelect />, <BootstrapSelect />]
+      }
     ]
   };
 
   render() {
+    const { demoes } = this.state;
     return (
       <div className='App'>
-        <Button color='danger'>Reactstrap works!</Button>
-        {this.state.components.map((comp, idx) => (
-          <div className='demo-wrapper' key={idx}>
-            {comp}
+        {demoes.map(({ label, comps }) => (
+          <div className='demo-wrapper'>
+            <h3>{label}</h3>
+            <CardDeck>
+              {comps.map(c => (
+                <Card>
+                  <CardBody>{c}</CardBody>
+                </Card>
+              ))}
+            </CardDeck>
           </div>
         ))}
       </div>
