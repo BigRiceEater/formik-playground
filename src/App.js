@@ -5,8 +5,7 @@ import './components/BasicInput';
 import BasicInput from './components/BasicInput';
 import BasicSelect from './components/BasicSelect';
 import FormikSelect from './components/FormikSelect';
-import BootstrapFormikSelect from './components/BootstrapFormikSelect';
-import BootstrapSelect from './components/BootstrapSelect';
+import ReactstrapFormikSelect from './components/ReactstrapInput';
 
 import { Card, CardBody, CardDeck } from 'reactstrap';
 class App extends React.Component {
@@ -15,8 +14,8 @@ class App extends React.Component {
       { label: 'Raw Formik', comps: [<BasicInput />, <BasicSelect />] },
       { label: 'Formik Helpers', comps: [<FormikSelect />] },
       {
-        label: 'Bootstrapped',
-        comps: [<BootstrapFormikSelect />, <BootstrapSelect />]
+        label: 'Reactstrapped Formik',
+        comps: [<ReactstrapFormikSelect />]
       }
     ]
   };
