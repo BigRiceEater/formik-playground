@@ -18,23 +18,24 @@ class ReactstrapInput extends Component {
         initialValues={{ yourname: 'John Doe' }}
         onSubmit={this.handleSubmit}
       >
-        {(values, handleSubmit, handleChange) => (
-          <BootstrapForm onSubmit={handleSubmit}>
-            <FormGroup>
-              <Label>Enter name</Label>
-              <Input
-                type='text'
-                name='yourname'
-                value={values.yourname}
-                className='form-control'
-                onChange={handleChange}
-              />
-            </FormGroup>
-            <Button color='primary' size='sm'>
-              Okay
-            </Button>
-          </BootstrapForm>
-        )}
+        {(values, handleSubmit, handleChange) => {
+          return (
+            <BootstrapForm onSubmit={handleSubmit}>
+              <FormGroup>
+                <Label>Enter name</Label>
+                <Input
+                  type='text'
+                  name='yourname'
+                  value={values.yourname}
+                  onChange={handleChange}
+                />
+              </FormGroup>
+              <Button color='primary' size='sm'>
+                Okay
+              </Button>
+            </BootstrapForm>
+          );
+        }}
       </Formik>
     );
   }
