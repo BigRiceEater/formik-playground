@@ -15,21 +15,20 @@ class App extends React.Component {
       <BasicInput />,
       <BasicSelect />,
       <FormikSelect />,
-      <BootstrapFormikSelect />
+      <BootstrapFormikSelect />,
+      <BootstrapSelect />
     ]
   };
 
   render() {
     return (
       <div className='App'>
+        <Button color='danger'>Reactstrap works!</Button>
         {this.state.components.map((comp, idx) => (
           <div className='demo-wrapper' key={idx}>
             {comp}
           </div>
         ))}
-
-        <BootstrapSelect />
-        <Button color='danger'>Reactstrap works!</Button>
       </div>
     );
   }
