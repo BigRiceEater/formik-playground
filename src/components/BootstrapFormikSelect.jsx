@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 import { Formik, Form, Field } from 'formik';
-import {
-  Form as BootstrapForm,
-  FormGroup,
-  Label,
-  Input,
-  Row,
-  Col
-} from 'reactstrap';
+import { Form as BootstrapForm, FormGroup, Label, Button } from 'reactstrap';
 
 class BootstrapFormikSelect extends Component {
   handleSubmit = values => {
@@ -24,12 +17,11 @@ class BootstrapFormikSelect extends Component {
             <BootstrapForm>
               <FormGroup>
                 <Label>Enter name</Label>
-                <Field type='text' name='yourname' />
+                <Field type='text' name='yourname' className='form-control' />
               </FormGroup>
-              <FormGroup>
-                <Label>Enter name</Label>
-                <Input type='text' name='yourname' />
-              </FormGroup>
+              <Button color='primary' size='sm'>
+                Okay
+              </Button>
             </BootstrapForm>
           </Form>
         )}
