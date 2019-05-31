@@ -1,0 +1,12 @@
+.App {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.demo-wrapper {
+  width: 512px;
+  padding: 16px;
+  margin: 32px auto;
+  border: 4px lightsalmon solid;
+  border-radius: 1rem;
+}
