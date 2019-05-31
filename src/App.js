@@ -5,10 +5,16 @@ import './components/BasicInput';
 import BasicInput from './components/BasicInput';
 import BasicSelect from './components/BasicSelect';
 import FormikSelect from './components/FormikSelect';
+import BootstrapFormikSelect from './components/BootstrapFormikSelect';
 
 class App extends React.Component {
   state = {
-    components: [<BasicInput />, <BasicSelect />, <FormikSelect />]
+    components: [
+      <BasicInput />,
+      <BasicSelect />,
+      <FormikSelect />,
+      <BootstrapFormikSelect />
+    ]
   };
 
   render() {
