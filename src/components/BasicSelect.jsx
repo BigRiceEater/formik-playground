@@ -11,7 +11,7 @@ class BasicSelect extends Component {
         {({ values, handleChange, handleSubmit }) => {
           return (
             <form onSubmit={handleSubmit}>
-              <label for='myselect'>Select</label>
+              <label htmlFor='myselect'>Select</label>
               <select
                 id='myselect'
                 name='myselect'
